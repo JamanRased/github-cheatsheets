@@ -3,23 +3,107 @@
 # create a new repository on the command line
 echo "# github-cheatsheets" >> README.md
 
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/JamanRased/github-cheatsheets.git
-git push -u origin main
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git branch -M main
+$ git remote add origin https://github.com/JamanRased/github-cheatsheets.git
+$ git push -u origin main
 
 # or push an existing repository from the command line
-git remote add origin https://github.com/JamanRased/github-cheatsheets.git
-git branch -M main
-git push -u origin main
+$ git remote add origin https://github.com/JamanRased/github-cheatsheets.git
+$ git branch -M main
+$ git push -u origin main
 
 # or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
-# advanced status
-# Chnages 
+==================
+# advanced status 
+==================
+
+# টুল কনফিগার করা
+সকল লোকাল রিপোজিটরির জন্য টুল কনফিগার করা
+
+$ git config --global user.name "[name]"
+
+নাম ঠিক করুন যেটা আপনি কমিট ট্রান্সেকশনের সাথে সংযুক্ত করতে চান।
+
+$ git config --global user.email "[email address]"
+
+ইমেইল ঠিক করুন যেটা আপনি কমিট ট্রান্সেকশনের সাথে সংযুক্ত করতে চান।
+
+# ফাইলের নাম Refactor করুন
+versioned ফাইল নতুন স্থানে স্থাপন বা মুছে ফেলুন
+
+$ git rm [file]
+
+ওয়ার্কিং ডিরেক্টরি থেকে ফাইল মুছে এবং মুছে ফেলার পর্যায়ে
+
+$ git rm --cached [file]
+
+ভার্সন নিয়ন্ত্রণ থেকে ফাইল মুছে ফেলা কিন্তু স্থানীয়ভাবে ফাইল সংরক্ষন করা
+
+$ git mv [file-original] [file-renamed]
+
+ফাইলের নাম পরিবর্তন করা এবং কমিট জন্য এটি প্রস্তুত করুন
+
+# ট্র্যাকিং দমন
+অস্থায়ী ফাইল এবং পাথ বাদ দিন
+
+*.log
+build/
+temp-*
+A text file named .gitignore suppresses accidental versioning of files and paths matching the specified patterns
+
+$ git ls-files --others --ignored --exclude-standard
+
+এই প্রকল্পে সব উপেক্ষিত ফাইলের তালিকা তৈরি করুন
+
+# ফ্রাগমেন্টস সংরক্ষন
+অসম্পূর্ণ পরিবর্তন পুনরুদ্ধার এবং সরাইয়া রাখা
+
+$ git stash
+
+সাময়িকভাবে সব পরিবর্তিত ট্র্যাক ফাইল স্টোর করা
+
+$ git stash pop
+
+সাম্প্রতিক stashed ফাইল রিস্টোর করা
+
+$ git stash list
+
+সব stashed changesets ফাইলের তালিকা তৈরি করুন
+
+$ git stash drop
+
+সাম্প্রতিক stashed changeset ফাইল বর্জন করুন
+
+# পরিবর্তন করা
+সম্পাদনা পর্যালোচনা করুন এবং একটি কমিট ট্রান্সেকসন ক্রাফট করুন।
+$ git status
+
+সকল ফাইল লিস্ট করুন যা কমিট করা হবে।
+
+$ git diff
+
+ফাইলগুলোর পার্থক্য দেখুন যেগুলো এখনো staged হয়নি।
+
+$ git add [file]
+
+সংস্করনের জন্য প্রস্তুতি ফাইল স্ন্যাপশট করুন।
+
+$ git diff --staged
+
+staging এবং last file version এরমধ্যে পার্থক্য দেখুন।
+
+$ git reset [file]
+
+ফাইল Unstages, কিন্তু তার বিষয়বস্তু অপরিবর্তিত রাখুন।
+
+$ git commit -m"[descriptive message]"
+
+ফাইলের স্ন্যাপশট ভার্শনের ইতিহাসে সংরক্ষন করুন।
 
 $ git status
 
