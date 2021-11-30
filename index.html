@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github documents - Cheatsheets</title>
+    <style>
+        .main{
+          display: flex;  
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Cheatsheets</h1>
+    <a href="https://git-scm.com/">Git Install</a>
+    <div class="main">
+        <div class="section1">
+            <div class="tool-config">
+                <h1>Tools Congfiger</h1>
+                <ul>
+                    <li>$ git config --global user.name "[name]"</li>
+                    <li>$ git config --global user.email "[email address]"</li>
+                </ul>
+            </div>
+            <div class="tool-use">
+                <h1>Repository Create & File Name Refactor </h1>
+                <ul>
+                    <li>$ git init [project-name]   - নতুন রিপোসিটোরি তৈরি  </li>
+                    <li>$ git clone [url] - ডাউনলোড করুন</li>
+                    <li>$ git rm [file]   - ওয়ার্কিং ডিরেক্টরি থেকে ফাইল মুছে এবং মুছে ফেলার পর্যায়ে </li>
+                    <li>$ git rm --cached [file]  - ফাইল মুছে ফেলা</li>
+                    <li>$ git mv [file-original] [file-renamed]   - ফাইলের নাম পরিবর্তন করা এবং কমিট </li>
+                </ul>
+            </div>
+            <div class="tool-use">
+                <h1>.gitignore</h1>
+                <ul>
+                    <li>*.log</li>
+                    <li>build/ </li>
+                    <li>temp-*</li>
+                    <li>$ git ls-files --others --ignored --exclude-standard   - ফাইলের তালিকা তৈরি </li>
+                </ul>
+            </div>
+            <div class="tool-use">
+                <h1>Fragments </h1>
+                <ul>
+                    <li>$ git stash    - পরিবর্তিত ট্র্যাক ফাইল স্টোর করা </li>
+                    <li>$ git stash pop  - stashed ফাইল রিস্টোর করা</li>
+                    <li>$ git stash list  - stashed changesets ফাইলের তালিকা তৈরি </li>
+                    <li>$ git stash drop   - stashed changeset ফাইল Delete </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="tool-use">
+                <h1>Fragments </h1>
+                <ul>
+                    <li>$ git status </li>
+                    <li>$ git stash pop  - stashed ফাইল রিস্টোর করা</li>
+                    <li>$ git stash list  - stashed changesets ফাইলের তালিকা তৈরি </li>
+                    <li>$ git stash drop   - stashed changeset ফাইল Delete </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
